@@ -4,14 +4,14 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/dchani/Desktop/minirt/main.c" "/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/main.c.o"
-  "/Users/dchani/Desktop/minirt/mlx/font.c" "/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/mlx/font.c.o"
-  "/Users/dchani/Desktop/minirt/mlx/mlx_png.c" "/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/mlx/mlx_png.c.o"
-  "/Users/dchani/Desktop/minirt/mlx/mlx_rgb.c" "/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/mlx/mlx_rgb.c.o"
-  "/Users/dchani/Desktop/minirt/mlx/mlx_string_put.c" "/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/mlx/mlx_string_put.c.o"
-  "/Users/dchani/Desktop/minirt/mlx/mlx_xpm.c" "/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/mlx/mlx_xpm.c.o"
+  "/home/phili/Desktop/minirt/main.c" "/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/main.c.o"
+  "/home/phili/Desktop/minirt/mlx/font.c" "/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/mlx/font.c.o"
+  "/home/phili/Desktop/minirt/mlx/mlx_png.c" "/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/mlx/mlx_png.c.o"
+  "/home/phili/Desktop/minirt/mlx/mlx_rgb.c" "/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/mlx/mlx_rgb.c.o"
+  "/home/phili/Desktop/minirt/mlx/mlx_string_put.c" "/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/mlx/mlx_string_put.c.o"
+  "/home/phili/Desktop/minirt/mlx/mlx_xpm.c" "/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/mlx/mlx_xpm.c.o"
   )
-set(CMAKE_C_COMPILER_ID "AppleClang")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

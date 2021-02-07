@@ -54,19 +54,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake
+CMAKE_COMMAND = /snap/clion/139/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
+RM = /snap/clion/139/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/dchani/Desktop/minirt
+CMAKE_SOURCE_DIR = /home/phili/Desktop/minirt
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/dchani/Desktop/minirt/cmake-build-debug
+CMAKE_BINARY_DIR = /home/phili/Desktop/minirt/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/minirt.dir/depend.make
@@ -79,81 +79,81 @@ include CMakeFiles/minirt.dir/flags.make
 
 CMakeFiles/minirt.dir/main.c.o: CMakeFiles/minirt.dir/flags.make
 CMakeFiles/minirt.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minirt.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/main.c.o   -c /Users/dchani/Desktop/minirt/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minirt.dir/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/main.c.o   -c /home/phili/Desktop/minirt/main.c
 
 CMakeFiles/minirt.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minirt.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dchani/Desktop/minirt/main.c > CMakeFiles/minirt.dir/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/phili/Desktop/minirt/main.c > CMakeFiles/minirt.dir/main.c.i
 
 CMakeFiles/minirt.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minirt.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dchani/Desktop/minirt/main.c -o CMakeFiles/minirt.dir/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/phili/Desktop/minirt/main.c -o CMakeFiles/minirt.dir/main.c.s
 
 CMakeFiles/minirt.dir/mlx/font.c.o: CMakeFiles/minirt.dir/flags.make
 CMakeFiles/minirt.dir/mlx/font.c.o: ../mlx/font.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/minirt.dir/mlx/font.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/mlx/font.c.o   -c /Users/dchani/Desktop/minirt/mlx/font.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/minirt.dir/mlx/font.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/mlx/font.c.o   -c /home/phili/Desktop/minirt/mlx/font.c
 
 CMakeFiles/minirt.dir/mlx/font.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minirt.dir/mlx/font.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dchani/Desktop/minirt/mlx/font.c > CMakeFiles/minirt.dir/mlx/font.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/phili/Desktop/minirt/mlx/font.c > CMakeFiles/minirt.dir/mlx/font.c.i
 
 CMakeFiles/minirt.dir/mlx/font.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minirt.dir/mlx/font.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dchani/Desktop/minirt/mlx/font.c -o CMakeFiles/minirt.dir/mlx/font.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/phili/Desktop/minirt/mlx/font.c -o CMakeFiles/minirt.dir/mlx/font.c.s
 
 CMakeFiles/minirt.dir/mlx/mlx_png.c.o: CMakeFiles/minirt.dir/flags.make
 CMakeFiles/minirt.dir/mlx/mlx_png.c.o: ../mlx/mlx_png.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/minirt.dir/mlx/mlx_png.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/mlx/mlx_png.c.o   -c /Users/dchani/Desktop/minirt/mlx/mlx_png.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/minirt.dir/mlx/mlx_png.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/mlx/mlx_png.c.o   -c /home/phili/Desktop/minirt/mlx/mlx_png.c
 
 CMakeFiles/minirt.dir/mlx/mlx_png.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minirt.dir/mlx/mlx_png.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dchani/Desktop/minirt/mlx/mlx_png.c > CMakeFiles/minirt.dir/mlx/mlx_png.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/phili/Desktop/minirt/mlx/mlx_png.c > CMakeFiles/minirt.dir/mlx/mlx_png.c.i
 
 CMakeFiles/minirt.dir/mlx/mlx_png.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minirt.dir/mlx/mlx_png.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dchani/Desktop/minirt/mlx/mlx_png.c -o CMakeFiles/minirt.dir/mlx/mlx_png.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/phili/Desktop/minirt/mlx/mlx_png.c -o CMakeFiles/minirt.dir/mlx/mlx_png.c.s
 
 CMakeFiles/minirt.dir/mlx/mlx_rgb.c.o: CMakeFiles/minirt.dir/flags.make
 CMakeFiles/minirt.dir/mlx/mlx_rgb.c.o: ../mlx/mlx_rgb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/minirt.dir/mlx/mlx_rgb.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/mlx/mlx_rgb.c.o   -c /Users/dchani/Desktop/minirt/mlx/mlx_rgb.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/minirt.dir/mlx/mlx_rgb.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/mlx/mlx_rgb.c.o   -c /home/phili/Desktop/minirt/mlx/mlx_rgb.c
 
 CMakeFiles/minirt.dir/mlx/mlx_rgb.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minirt.dir/mlx/mlx_rgb.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dchani/Desktop/minirt/mlx/mlx_rgb.c > CMakeFiles/minirt.dir/mlx/mlx_rgb.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/phili/Desktop/minirt/mlx/mlx_rgb.c > CMakeFiles/minirt.dir/mlx/mlx_rgb.c.i
 
 CMakeFiles/minirt.dir/mlx/mlx_rgb.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minirt.dir/mlx/mlx_rgb.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dchani/Desktop/minirt/mlx/mlx_rgb.c -o CMakeFiles/minirt.dir/mlx/mlx_rgb.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/phili/Desktop/minirt/mlx/mlx_rgb.c -o CMakeFiles/minirt.dir/mlx/mlx_rgb.c.s
 
 CMakeFiles/minirt.dir/mlx/mlx_string_put.c.o: CMakeFiles/minirt.dir/flags.make
 CMakeFiles/minirt.dir/mlx/mlx_string_put.c.o: ../mlx/mlx_string_put.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/minirt.dir/mlx/mlx_string_put.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/mlx/mlx_string_put.c.o   -c /Users/dchani/Desktop/minirt/mlx/mlx_string_put.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/minirt.dir/mlx/mlx_string_put.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/mlx/mlx_string_put.c.o   -c /home/phili/Desktop/minirt/mlx/mlx_string_put.c
 
 CMakeFiles/minirt.dir/mlx/mlx_string_put.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minirt.dir/mlx/mlx_string_put.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dchani/Desktop/minirt/mlx/mlx_string_put.c > CMakeFiles/minirt.dir/mlx/mlx_string_put.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/phili/Desktop/minirt/mlx/mlx_string_put.c > CMakeFiles/minirt.dir/mlx/mlx_string_put.c.i
 
 CMakeFiles/minirt.dir/mlx/mlx_string_put.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minirt.dir/mlx/mlx_string_put.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dchani/Desktop/minirt/mlx/mlx_string_put.c -o CMakeFiles/minirt.dir/mlx/mlx_string_put.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/phili/Desktop/minirt/mlx/mlx_string_put.c -o CMakeFiles/minirt.dir/mlx/mlx_string_put.c.s
 
 CMakeFiles/minirt.dir/mlx/mlx_xpm.c.o: CMakeFiles/minirt.dir/flags.make
 CMakeFiles/minirt.dir/mlx/mlx_xpm.c.o: ../mlx/mlx_xpm.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/minirt.dir/mlx/mlx_xpm.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/mlx/mlx_xpm.c.o   -c /Users/dchani/Desktop/minirt/mlx/mlx_xpm.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/minirt.dir/mlx/mlx_xpm.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minirt.dir/mlx/mlx_xpm.c.o   -c /home/phili/Desktop/minirt/mlx/mlx_xpm.c
 
 CMakeFiles/minirt.dir/mlx/mlx_xpm.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minirt.dir/mlx/mlx_xpm.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dchani/Desktop/minirt/mlx/mlx_xpm.c > CMakeFiles/minirt.dir/mlx/mlx_xpm.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/phili/Desktop/minirt/mlx/mlx_xpm.c > CMakeFiles/minirt.dir/mlx/mlx_xpm.c.i
 
 CMakeFiles/minirt.dir/mlx/mlx_xpm.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minirt.dir/mlx/mlx_xpm.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dchani/Desktop/minirt/mlx/mlx_xpm.c -o CMakeFiles/minirt.dir/mlx/mlx_xpm.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/phili/Desktop/minirt/mlx/mlx_xpm.c -o CMakeFiles/minirt.dir/mlx/mlx_xpm.c.s
 
 # Object files for target minirt
 minirt_OBJECTS = \
@@ -175,7 +175,7 @@ minirt: CMakeFiles/minirt.dir/mlx/mlx_string_put.c.o
 minirt: CMakeFiles/minirt.dir/mlx/mlx_xpm.c.o
 minirt: CMakeFiles/minirt.dir/build.make
 minirt: CMakeFiles/minirt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable minirt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable minirt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/minirt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -188,6 +188,6 @@ CMakeFiles/minirt.dir/clean:
 .PHONY : CMakeFiles/minirt.dir/clean
 
 CMakeFiles/minirt.dir/depend:
-	cd /Users/dchani/Desktop/minirt/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/dchani/Desktop/minirt /Users/dchani/Desktop/minirt /Users/dchani/Desktop/minirt/cmake-build-debug /Users/dchani/Desktop/minirt/cmake-build-debug /Users/dchani/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/phili/Desktop/minirt/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/phili/Desktop/minirt /home/phili/Desktop/minirt /home/phili/Desktop/minirt/cmake-build-debug /home/phili/Desktop/minirt/cmake-build-debug /home/phili/Desktop/minirt/cmake-build-debug/CMakeFiles/minirt.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/minirt.dir/depend
 
