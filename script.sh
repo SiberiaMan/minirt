@@ -1,0 +1,1 @@
+gcc -Lmlx main.c libmlx.dylib libft.a && ./a.out
