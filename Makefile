@@ -1,6 +1,8 @@
 NAME        =	minirt
 NAME_LIB	=	libmlx.dylib
 
+CC = gcc
+
 SRC         =   draw/close.c\
                 draw/draw.c\
                 draw/export_bmp.c\
@@ -54,14 +56,15 @@ includes    =	includes
 
 OBJS	= $(SRC:.c=.o)
 
-$(NAME): $(includes) $(SRC)
+$(NAME): $(includes) $(OBJS)
 	cd mlx && make && mv $(NAME_LIB) ../. && cd ..
-	gcc -Lmlx -Wall -Wextra -Werror -o $(NAME) $(NAME_LIB) $(SRC) -I $(headers)
+	gcc -Lmlx -Wall -Wextra -Werror  -o $(NAME) $(NAME_LIB) $(OBJS) -I $(headers)
 
 all:	$(NAME)
 
 clean:
 	rm -rf $(NAME)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -rf image.bmp && mv $(NAME_LIB) mlx && cd mlx && make clean && cd ../
