@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchani <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 20:24:04 by dchani            #+#    #+#             */
-/*   Updated: 2020/11/03 11:27:27 by dchani           ###   ########.fr       */
+/*   Created: 2021/02/15 19:14:50 by dchani            #+#    #+#             */
+/*   Updated: 2021/02/15 19:14:51 by dchani           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minirt.h"
 
-void		ft_lstadd_back(t_list **lst, t_list *new)
+size_t		color_check(t_vec3f *color)
 {
-	t_list		*cur;
+	if (!(0 <= color->x && 0 <= color->y && 0 <= color->z
+	&& color->x <= 255 && color->y <= 255 && color->z <= 255))
+		return (0);
+	return (1);
+}
 
-	cur = *lst;
-	if (cur)
-	{
-		while (cur->next)
-			cur = cur->next;
-		cur->next = new;
-	}
-	else
-		*lst = new;
+size_t		normal_check(t_vec3f *normal)
+{
+	if (!(0 <= fabs(normal->x) && 0 <= fabs(normal->y)
+	&& 0 <= fabs(normal->z) && fabs(normal->x) <= 1
+	&& fabs(normal->y) <= 1 && fabs(normal->z) <= 1))
+		return (0);
+	return (1);
 }

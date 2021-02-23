@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../../includes/minirt.h"
 
 static	char		*q_pop(char **queue)
 {

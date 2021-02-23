@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   tr_raytrace.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchani <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 20:24:04 by dchani            #+#    #+#             */
-/*   Updated: 2020/11/03 11:27:27 by dchani           ###   ########.fr       */
+/*   Created: 2021/02/11 22:49:17 by dchani            #+#    #+#             */
+/*   Updated: 2021/02/11 22:49:18 by dchani           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/minirt.h"
+#include "../../includes/minirt.h"
 
-void		ft_lstadd_back(t_list **lst, t_list *new)
+size_t		ray_to_tr(t_vec3f orig, t_vec3f dir, t_obj *obj, double *dist_i)
 {
-	t_list		*cur;
+	double	new_dist;
 
-	cur = *lst;
-	if (cur)
+	if (tr_intersect1(orig, dir, &new_dist, obj) && new_dist < *dist_i)
 	{
-		while (cur->next)
-			cur = cur->next;
-		cur->next = new;
+		*dist_i = new_dist;
+		return (1);
 	}
-	else
-		*lst = new;
+	return (0);
+}
+
+void		tr_matrix(t_obj *obj, t_vec3f point, t_matrix *m)
+{
+	m->v1 = point;
+	m->v2 = mul(obj->normal, -1);
+	m->v3 = obj->color;
 }

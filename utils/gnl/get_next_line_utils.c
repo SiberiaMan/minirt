@@ -10,20 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-
-static	size_t		ft_strlen(const char *s)
-{
-	int len;
-
-	len = 0;
-	while (s && *s)
-	{
-		len++;
-		s++;
-	}
-	return (len);
-}
+#include "../../includes/minirt.h"
 
 char				*ft_strjoin(char const *s1, char const *s2)
 {

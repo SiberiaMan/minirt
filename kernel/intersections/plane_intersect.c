@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   plane_intersect.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchani <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 20:24:04 by dchani            #+#    #+#             */
-/*   Updated: 2020/11/03 11:27:27 by dchani           ###   ########.fr       */
+/*   Created: 2021/02/11 19:26:58 by dchani            #+#    #+#             */
+/*   Updated: 2021/02/11 19:26:59 by dchani           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/minirt.h"
+#include "../../includes/minirt.h"
 
-void		ft_lstadd_back(t_list **lst, t_list *new)
+size_t		plane_intersect(t_vec3f orig, t_vec3f dir, double *t0, t_obj *obj)
 {
-	t_list		*cur;
+	double		denom;
+	t_vec3f		l;
 
-	cur = *lst;
-	if (cur)
+	if (dot(dir, obj->normal) < 0)
+		obj->normal = mul(obj->normal, -1);
+	denom = dot(obj->normal, dir);
+	if (denom > 1e-6)
 	{
-		while (cur->next)
-			cur = cur->next;
-		cur->next = new;
+		l = sub(obj->center, orig);
+		*t0 = dot(l, obj->normal) / denom;
+		return (*t0 >= 0);
 	}
-	else
-		*lst = new;
+	return (0);
 }

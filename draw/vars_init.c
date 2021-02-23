@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   vars_init.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchani <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 20:24:04 by dchani            #+#    #+#             */
-/*   Updated: 2020/11/03 11:27:27 by dchani           ###   ########.fr       */
+/*   Created: 2021/02/15 18:48:28 by dchani            #+#    #+#             */
+/*   Updated: 2021/02/15 18:48:29 by dchani           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minirt.h"
 
-void		ft_lstadd_back(t_list **lst, t_list *new)
+void	vars_init(t_vars *vars)
 {
-	t_list		*cur;
-
-	cur = *lst;
-	if (cur)
-	{
-		while (cur->next)
-			cur = cur->next;
-		cur->next = new;
-	}
-	else
-		*lst = new;
+	vars->mlx = 0;
+	vars->img.img = 0;
+	vars->win = 0;
 }

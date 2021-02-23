@@ -1,68 +1,42 @@
-#include "mlx/mlx.h"
-#include "utils/libft.h"
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dchani <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/08 17:49:34 by dchani            #+#    #+#             */
+/*   Updated: 2021/02/08 17:49:36 by dchani           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-typedef struct s_data {
-	void 	*img;
-	char	*addr;
-	int 	bits_per_pixel;
-	int 	line_length;
-	int 	endian;
-}				t_data;
+#include "includes/minirt.h"
 
-typedef struct	s_vars {
-	void 	*mlx;
-	void 	*win;
-	t_data	img;
-}				t_vars;
-
-void 	my_mlx_pixel_put(t_data *data, int x, int y, int color)
+int		main(int argc, char **argv)
 {
-	char	*dst;
+	t_scene		*scene;
 
-	dst = data->addr + (y * data->line_length + x * (data->bits_per_pixel / 8));
-	*(unsigned int*)dst = color;
-}
-
-int 	create_trgb(int t, int r, int g, int b)
-{
-	return(t << 24 | r << 16 | g << 8 | b);
-}
-
-int				depend(int keycode, t_vars *vars)
-{
-	my_mlx_pixel_put(&(*vars).img, 10, 10, create_trgb(0, 0, 255, 0));
-	if (keycode == 48)
+	if (argc == 1)
+		write(0, "Error\nNo given files", 20);
+	else if (check_format(argv[1]) && (scene = parse(argv)))
 	{
-		int i = 0;
-		for (int y = 0; y < 500; y++)
-			for (int x = 0; x < 500; x++)
-				my_mlx_pixel_put(&(vars->img), x, y, create_trgb(0, 0, 255, 0));
-		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.img, 0, 0);
+		if (argc == 3 && ft_strnstr(argv[2], "--save", 6))
+			scene->sv = 1;
+		else if (argc > 3 || (argc == 3 && !ft_strnstr(argv[2], "--save", 6)))
+		{
+			write(0, "Error\nWrong arguments\n", 23);
+			clear_scene1(scene);
+			return (0);
+		}
+		if (!scene->valid)
+		{
+			write(0, "Error\nWrong .rt format", 22);
+			clear_scene1(scene);
+		}
+		else
+			start_ray_tracing_1(scene);
 	}
-	if(keycode == 49)
-	{
-		printf("no hello world\n");
-		for (int y = 0; y < 500; y++)
-			for (int x = 0; x < 500; x++)
-				my_mlx_pixel_put(&vars->img, x, y, create_trgb(0, 0, 0, 255));
-		mlx_put_image_to_window(vars->mlx, vars->win, vars->img.img, 0, 0);
-	}
-	//mlx_put_image_to_window(vars->mlx, vars->win, vars->img.img, 0, 0);
-}
-
-int				main(void)
-{
-	t_vars		vars;
-
-	char *s = "Hello";
-	printf("%i\n", ft_strlen(s));
-	vars.mlx = mlx_init();
-	vars.win = mlx_new_window(vars.mlx, 500, 500, "Hello World!");
-	vars.img.img = mlx_new_image(vars.mlx, 500, 500);
-	vars.img.addr = mlx_get_data_addr(vars.img.img, &vars.img.bits_per_pixel,
-								   &vars.img.line_length, &vars.img.endian);
-	mlx_hook(vars.win, 2, 1L << 0, depend, &vars);
-	mlx_put_image_to_window(vars.mlx, vars.win, vars.img.img, 0, 0);
-	mlx_loop(vars.mlx);
+	else
+		write(0, "Error\nIt's not .rt file :(\n", 27);
+	return (0);
 }

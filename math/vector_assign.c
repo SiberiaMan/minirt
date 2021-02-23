@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   vector_assign.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchani <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 20:24:04 by dchani            #+#    #+#             */
-/*   Updated: 2020/11/03 11:27:27 by dchani           ###   ########.fr       */
+/*   Created: 2021/02/11 16:27:17 by dchani            #+#    #+#             */
+/*   Updated: 2021/02/11 16:27:19 by dchani           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minirt.h"
 
-void		ft_lstadd_back(t_list **lst, t_list *new)
+void		vector_assign(t_vec3f *u, char **buf)
 {
-	t_list		*cur;
-
-	cur = *lst;
-	if (cur)
-	{
-		while (cur->next)
-			cur = cur->next;
-		cur->next = new;
-	}
-	else
-		*lst = new;
+	u->x = ft_atof(buf[0]);
+	u->y = ft_atof(buf[1]);
+	u->z = ft_atof(buf[2]);
 }

@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   vectors2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchani <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 20:24:04 by dchani            #+#    #+#             */
-/*   Updated: 2020/11/03 11:27:27 by dchani           ###   ########.fr       */
+/*   Created: 2021/02/09 20:30:31 by dchani            #+#    #+#             */
+/*   Updated: 2021/02/09 20:30:32 by dchani           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minirt.h"
 
-void		ft_lstadd_back(t_list **lst, t_list *new)
+double			len(t_vec3f v)
 {
-	t_list		*cur;
+	return (sqrt(v.x * v.x + v.y * v.y + v.z * v.z));
+}
 
-	cur = *lst;
-	if (cur)
-	{
-		while (cur->next)
-			cur = cur->next;
-		cur->next = new;
-	}
-	else
-		*lst = new;
+t_vec3f			normalize(t_vec3f v)
+{
+	double l;
+
+	l = len(v);
+	return ((t_vec3f) {
+		v.x / l,
+		v.y / l,
+		v.z / l
+	});
 }

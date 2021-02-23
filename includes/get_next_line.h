@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchani <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 20:24:04 by dchani            #+#    #+#             */
-/*   Updated: 2020/11/03 11:27:27 by dchani           ###   ########.fr       */
+/*   Created: 2020/11/20 20:14:33 by dchani            #+#    #+#             */
+/*   Updated: 2020/11/24 21:33:53 by dchani           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/minirt.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-void		ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list		*cur;
+# define FD_MAX	1
 
-	cur = *lst;
-	if (cur)
-	{
-		while (cur->next)
-			cur = cur->next;
-		cur->next = new;
-	}
-	else
-		*lst = new;
-}
+# include <unistd.h>
+# include <stdlib.h>
+# include <fcntl.h>
+
+int			get_next_line(int fd, char **line);
+char		*ft_strdup(const char *s1);
+char		*ft_strjoin(char const *s1, char const *s2);
+
+#endif

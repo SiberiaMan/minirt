@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   elem_assign.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchani <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 20:24:04 by dchani            #+#    #+#             */
-/*   Updated: 2020/11/03 11:27:27 by dchani           ###   ########.fr       */
+/*   Created: 2021/02/09 12:55:48 by dchani            #+#    #+#             */
+/*   Updated: 2021/02/09 12:55:50 by dchani           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minirt.h"
 
-void		ft_lstadd_back(t_list **lst, t_list *new)
+void			elem_assign(t_list_obj *elem, t_obj *obj, t_names name)
 {
-	t_list		*cur;
+	elem->content = obj;
+	elem->content->name = name;
+	elem->content->number = g_num++;
+	elem->next = 0;
+}
 
-	cur = *lst;
-	if (cur)
-	{
-		while (cur->next)
-			cur = cur->next;
-		cur->next = new;
-	}
-	else
-		*lst = new;
+t_list_obj		*elem_assign_r(t_list_obj *elem, t_obj *obj, t_names name)
+{
+	elem->content = obj;
+	elem->content->name = name;
+	elem->content->number = g_num++;
+	elem->next = 0;
+	return (elem);
 }

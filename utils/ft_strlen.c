@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/minirt.h"
 
 size_t			ft_strlen(const char *s)
 {
 	size_t len;
 
 	len = 0;
-	while (*s)
+	while (s && *s)
 	{
 		len++;
 		s++;

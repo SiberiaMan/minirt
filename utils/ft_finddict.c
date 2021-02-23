@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_finddict.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dchani <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/02 20:24:04 by dchani            #+#    #+#             */
-/*   Updated: 2020/11/03 11:27:27 by dchani           ###   ########.fr       */
+/*   Created: 2021/02/08 12:56:13 by dchani            #+#    #+#             */
+/*   Updated: 2021/02/08 12:56:15 by dchani           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/minirt.h"
 
-void		ft_lstadd_back(t_list **lst, t_list *new)
+size_t		ft_finddict(char const *dict, char const *buf)
 {
-	t_list		*cur;
+	size_t	len;
+	size_t	i;
 
-	cur = *lst;
-	if (cur)
+	i = 0;
+	len = ft_strlen(buf);
+	while (i < len)
 	{
-		while (cur->next)
-			cur = cur->next;
-		cur->next = new;
+		if (!(ft_strchr(dict, buf[i])))
+			return (0);
+		i++;
 	}
-	else
-		*lst = new;
+	return (1);
 }
