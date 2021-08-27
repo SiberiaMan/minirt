@@ -1,7 +1,7 @@
 # Mini Ray-Tracing
 ![alt text](https://github.com/SiberiaMan/Images/blob/master/minirt/Screenshot%20from%202021-08-27%2012-41-08.png)
 ###### Warning! Works only on Mac OS!
-## Desription
+## Description
 A simple ray-tracing school 21 project. Supports following features:  
 -Shadows  
 -Ambient light   
