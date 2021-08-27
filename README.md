@@ -5,7 +5,7 @@
 A simple ray-tracing school 21 project. Supports following features:  
 -Shadows  
 -Ambient light   
--Rotation and moving of camera in parse-file  
+-Switch cameras in real time (with `A` and `D`)
 
 Geometric shapes supported by the program:  
 -Sphere  
